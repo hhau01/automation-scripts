@@ -5,8 +5,18 @@
 import logging
 
 # TO DISABLE LOGGING
+# Will disable CRITICAL level and below --in other words, everything
 # logging.disable(logging.CRITICAL)
 
+# Logging Levels: Lowest -> Highest
+# DEBUG -> INFO -> WARNING -> ERROR -> CRITICAL
+# eg. logging.info('Log module is working')
+# eg. logging.critical('CRITICAL ERROR: Program is unable to recover!')
+
+# passing .logging.ERROR to level will only show logs with level ERROR and above
+
+# you can even write the log messages to a file by adding:
+# filename='myProgramLog.txt' to the arguments
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 
 # When Python logs an event, it creates a LogRecord object that holds information about that event. The logging module's basicConfig() function lets you specify what details about the LogRecord object you want to see and how you want those details displayed.
